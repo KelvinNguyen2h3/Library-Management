@@ -1,0 +1,37 @@
+﻿@model IEnumerable<LibraryManagement.Models.Domain.Genre>
+@{
+}
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <a class="btn btn-dark" href="/Genre/Add">+ Thêm</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Danh sách thể loại</h3>
+
+            <table  class="table table-stripped table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th>Thể loại</th>
+                        <th>Xử lý</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model){
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>
+                                <a class="btn btn-success" href="/Genre/Update?id=@item.Id"><i class="bi bi-pen"></i> Sửa</a> |
+                                <a class="btn btn-danger" onclick="return window.confirm('Bạn chắc chứ?')" href="/Genre/Delete?id=@item.Id"><i class="bi bi-trash"></i> Xóa</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

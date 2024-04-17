@@ -1,0 +1,88 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+img {
+    object-fit: cover;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: white !important;
+    margin-bottom: 60px;
+    background: linear-gradient(-45deg, #7b7b7b, #594538, #7b1f4a, #352230);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.table > :not(caption) > * > * {
+    color: #fff;
+}
+
+.btn {
+    min-width: 100px;
+    text-align: center;
+    display: inline-block;
+    background: #fff;
+    color: #ff523b;
+    padding: 8px 30px;
+    margin: 5px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+     color: #000;
+     background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+     transition: ease 0.5s;
+ }
+
+
+
+td {
+    vertical-align: middle;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.Isbn:hover {
+    display: block;
+}
+
+.Isbn {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+}
